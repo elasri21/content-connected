@@ -1,0 +1,636 @@
+/* start landing */
+.landing {
+    background-image: url("../images/landing.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 50%;
+        background-color: $light-pink;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    margin-top: 81px;
+    .container {
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            div {
+                width: 100% !important;
+                &.blue-box {
+                    margin-top: 50px !important;
+                }
+                &.grayish-box {
+                    margin-top: 50px !important;
+                }
+            }
+        }
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 30px;
+        div {
+            position: relative;
+            padding: 60px 30px;
+            width: 400px;
+            h2 {
+                font-weight: 500;
+                color: $white;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+            P {
+                line-height: 1.7;
+                color: $white;
+                letter-spacing: 1px;
+            }
+            &.blue-box {
+                background-color: $blue;
+                margin-top: 200px;
+                h2 {
+                    font-size: 50px;
+                }
+                p {
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+                a {
+                    display: block;
+                    width: fit-content;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    color: $white;
+                    padding-bottom: 5px;
+                    border-bottom: 2px solid $white;
+                    &:hover {
+                        color: $blue-sky;
+                        border-bottom-color: $blue-sky;
+                    }
+                }
+            }
+            &.grayish-box {
+                background-color: $grayish;
+                h2 {
+                    font-size: 40px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+/* end landing*/
+
+/* start about*/
+.about {
+    background-color: $blue;
+    padding: 50px 0;
+    .container {
+        @media (min-width: 1087px) {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            & > div {
+                width: calc(50% - 15px);
+            }
+        }
+        .info {
+            h2 {
+                font-size: 50px;
+                font-weight: 700;
+                color: $white;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                span {
+                    display: block;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                    font-weight: 400;
+                }
+            }
+            p {
+                font-size: 16px;
+                color: $white;
+                line-height: 1.7;
+                margin-bottom: 30px;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+            a {
+                display: block;
+                width: fit-content;
+                padding: 15px 40px;
+                background-color: $light-pink;
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 600;
+                color: $white;
+                border-radius: 30px;
+                &:hover {
+                    background-color: $dark-pink;
+                }
+            }
+        }
+        .boxes {
+            @media (min-width: 1087px) {
+                margin-top: 0 !important;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+                .box {
+                    padding: 50px 15px !important;
+                }
+            }
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+            gap: 20px;
+            .box {
+                padding: 50px 20px;
+                background-color: $white;
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    margin-bottom: 30px;
+                    &.icon-1 {
+                        background-color: $light-pink;
+                    }
+                    &.icon-2 {
+                        background-color: $dark-pink;
+                    }
+                    &.icon-3 {
+                        background-color: $grayish;
+                    }
+                    &.icon-4 {
+                        background-color: $blue-sky;
+                    }
+                    i {
+                        font-size: 50px;
+                        color: $white;
+                    }
+                }
+                h3 {
+                    font-size: 30px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    margin-bottom: 30px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 1.7;
+                    color: #bab9b9;
+                    font-style: italic;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+/* end about*/
+
+/* start branding*/
+.branding {
+    background-color: $white;
+    background-image: url("../images/landing.jpg");
+    background-size: 50% 50%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    position: relative;
+    @media (max-width: 767px) {
+        &::before {
+            width: 100% !important;
+        }
+    }
+    &::before {
+        content: "";
+        width: 70%;
+        height: 150px;
+        background-color: $light-pink;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+    .container {
+        position: relative;
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        .profile {
+            max-width: 300px;
+            border: 5px solid $white;
+            background-color: $white;
+            img {
+                display: block;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            h3 {
+                font-size: 40px;
+                font-weight: 300;
+                color: $blue;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                margin-bottom: 30px;
+            }
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 18px;
+                    color: #333;
+                    letter-spacing: 1px;
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                    i {
+                        font-size: 20px;
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .info {
+            padding: 30px;
+            background-color: $blue;
+            max-width: 400px;
+            h3{
+                font-size: 40px;
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.7;
+                color: $white;
+                letter-spacing: 1px;
+                margin-bottom: 30px;
+            }
+            a {
+                display: block;
+                width: fit-content;
+                padding: 15px 40px;
+                background-color: $light-pink;
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 600;
+                color: $white;
+                border-radius: 30px;
+                &:hover {
+                    background-color: $dark-pink;
+                }
+            }
+        }
+    }
+
+}
+/* end branding*/
+
+/* start thinking */
+.thinking {
+    padding: 50px 0;
+    background-color: $light-pink;
+    .container{
+        @media (min-width: 768px) {
+            & > div {
+                width: 50%;
+            }
+        }
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+        }
+        display: flex;
+        .image {
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        .info {
+            background-color: $white;
+            padding: 50px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            h2 {
+                font-size: 50px;
+                font-weight: 300;
+                color: $blue;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+            }
+            p {
+                font-size: 18px;
+                color: #333;
+                line-height: 1.7;
+                letter-spacing: 1px;
+            }
+            a {
+                display: block;
+                width: fit-content;
+                padding: 15px 40px;
+                background-color: $light-pink;
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 600;
+                color: $white;
+                border-radius: 30px;
+                &:hover {
+                    background-color: $blue-sky;
+                }
+            }
+
+        }
+    }
+}
+/* end thinking */
+
+/* start work */
+.work {
+    background-color: $white;
+    padding: 50px 0;
+    .container {
+        .info {
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+                & > div {
+                    width: 100% !important;
+                }
+            }
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            & > div {
+                width: calc(50% - 20px);
+            }
+            h2 {
+                font-size: 50px;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                color: $blue;
+                margin-bottom: 30px;
+                font-weight: 300;
+                span {
+                    font-size: 20px;
+                    color: #333;
+                    text-transform: uppercase;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+            p {
+                font-size: 16px;
+                color: #333;
+                line-height: 1.7;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+            a {
+                display: block;
+                i {
+                    font-size: 40px;
+                    color: #333;
+                    transition: .3s;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            .box {
+                padding: 50px 30px;
+                &.box-1 {
+                    background-color: $dark-pink;
+                }
+                &.box-2 {
+                    background-color: $blue-sky;
+                }
+                &.box-3 {
+                    background-color: $blue;
+                }
+                p {
+                    font-size: 22px;
+                    color: $white;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    margin-bottom: 30px;
+                }
+                h3 {
+                    font-size: 80px;
+                    color: $white;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+/* end work */
+
+/* start consultation */
+.consultation {
+    background-color: $light-pink;
+    padding: 50px 0;
+    .container {
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-size: 40px;
+            font-weight: 500;
+            color: $blue;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+        }
+        a {
+            display: block;
+            padding: 15px 40px;
+            border-radius: 30px;
+            border: 2px solid $blue;
+            background-color: $blue;
+            color: $white;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            &:hover {
+                background-color: $blue-sky;
+                border-color: $white;
+            }
+        }
+    }
+}
+/* end consultation */
+
+/* start portfolio */
+.portfolio {
+    background-color: $white;
+    padding: 50px 0;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        .box {
+            &.box-5 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $white;
+                padding: 80px 30px;
+                box-shadow: 0 0 5px #eee;
+                h3 {
+                    text-align: center;
+                    font-size: 40px;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    color: $blue;
+                }
+            }
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+/* end portfolio */
+
+/* start contact */
+.contact {
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        .info {
+            width: 100% !important;
+        }
+        .info-contact {
+            width: 100% !important;
+        }
+    }
+    display: flex;
+    align-items: flex-start;
+    .info {
+        background-color: $blue;
+        padding: 100px 60px;
+        width: 60%;
+        .box {
+            margin-bottom: 50px;
+            p {
+                font-size: 25px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: $white;
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 50px;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                color: $white;
+                font-weight: 300px;
+            }
+        }
+    }
+    .info-contact {
+        background-color: $white;
+        width: 40%;
+        padding: 50px 40px;
+        h3 {
+            font-size: 25px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            color: $dark-pink;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        .email {
+            font-size: 16px;
+            font-weight: 400;
+            color: $blue;
+            padding-bottom: 5px;
+            display: block;
+            width: fit-content;
+            border-bottom: 2x solid $blue;
+            &:hover {
+                color: $blue-sky;
+                border-bottom-color: $blue-sky;
+            }
+        }
+        .social {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid $blue-sky;
+            width: fit-content;
+            display: flex;
+            gap: 25px;
+            a {
+                i {
+                    font-size: 30px;
+                    transition: .3s;
+                    &.facebook {
+                        color: $blue;
+                    }
+                    &.twitter {
+                        color: $blue-sky;
+                    }
+                    &.instagram {
+                        color: $dark-pink;
+                    }
+                    &.youtube {
+                        color: #f00;
+                    }
+                    &:hover {
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+/* end contact */
